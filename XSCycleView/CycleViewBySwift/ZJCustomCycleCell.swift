@@ -22,7 +22,7 @@ class ZJCustomCycleCell: UICollectionViewCell {
     }
     
     func createSubviews(frame: CGRect){
-        imageView = UIImageView.init(frame: CGRectMake(0, 0, frame.size.width, frame.size.height))
+        imageView = UIImageView.init(frame: CGRectMake(25, 10, frame.size.width - 50, frame.size.height - 20))
         self.contentView.addSubview(imageView)
         
         labelTitle = UILabel.init(frame: CGRectMake(10, 10, 30, 30))

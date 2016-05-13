@@ -13,7 +13,7 @@ class ViewController: UIViewController, ZJCycleViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let cycle = ZJCycleScrollView.init(frame: CGRectMake(0, 70, width, 175))
+        let cycle = ZJCycleScrollView.init(frame: CGRectMake(0, 70, width, 375))
         cycle.delegate = self;
         let images: NSMutableArray = ["http://images11.app.happyjuzi.com/news/201604/12/570c656b35ae9.jpg", "http://images11.app.happyjuzi.com/news/201604/12/570c8bc8e0b33.jpg", "http://images11.app.happyjuzi.com/news/201604/12/570c656b35ae9.jpg", "http://images11.app.happyjuzi.com/news/201604/12/570c8bc8e0b33.jpg"]
         cycle.images = images

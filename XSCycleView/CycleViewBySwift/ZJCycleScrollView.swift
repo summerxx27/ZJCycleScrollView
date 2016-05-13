@@ -10,6 +10,7 @@ import UIKit
 import Haneke
 
 let sectionNum: Int = 100
+let cellIdentifier: String = "cellIdentifier"
 let width = (UIScreen.mainScreen().bounds.size.width)
 let height = (UIScreen.mainScreen().bounds.size.width)
 // 协议
@@ -54,7 +55,7 @@ class ZJCycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         cycleCollectionView!.delegate = self
         cycleCollectionView!.showsHorizontalScrollIndicator = false
         cycleCollectionView!.showsVerticalScrollIndicator = false
-        cycleCollectionView!.registerClass(ZJCustomCycleCell.self, forCellWithReuseIdentifier: "cellId")
+        cycleCollectionView!.registerClass(ZJCustomCycleCell.self, forCellWithReuseIdentifier: cellIdentifier)
         self.addSubview(cycleCollectionView!)
         
         pageControl = UIPageControl.init(frame: CGRectMake(0, 0, frame.size.width / 2, 30))
@@ -92,7 +93,7 @@ class ZJCycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     }
     // Delegate
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath) as! ZJCustomCycleCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! ZJCustomCycleCell
         cell.labelTitle.text = NSString(format: "%d", indexPath.row) as String
         let url:String = self.images[indexPath.row] as! String
         cell.imageView.hnk_setImageFromURL(NSURL.init(string: url)!)
