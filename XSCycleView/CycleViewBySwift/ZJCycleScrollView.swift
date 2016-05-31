@@ -48,7 +48,7 @@ class ZJCycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         flowlayout.minimumInteritemSpacing = 0;
         flowlayout.minimumLineSpacing = 0;
         flowlayout.scrollDirection = UICollectionViewScrollDirection.Horizontal;
-        
+
         cycleCollectionView!.backgroundColor = UIColor.lightGrayColor()
         cycleCollectionView!.pagingEnabled = true
         cycleCollectionView!.dataSource  = self
