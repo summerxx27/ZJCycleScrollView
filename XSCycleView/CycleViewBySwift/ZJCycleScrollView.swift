@@ -18,10 +18,20 @@ protocol ZJCycleViewDelegate {
     func didSelectIndexCollectionViewCell(index: Int)->Void
 
 
+
     ///丰富的可可粉
     ///
     ///
     ///
+    ///// bbbbbb
+    ///
+    ////  222222222222
+    ///////
+    ///
+    ///
+    ///
+    /// 这是一个合并分支
+
 }
 
 class ZJCycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataSource{
