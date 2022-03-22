@@ -16,6 +16,9 @@ let height = (UIScreen.mainScreen().bounds.size.width)
 // 协议
 protocol ZJCycleViewDelegate {
     func didSelectIndexCollectionViewCell(index: Int)->Void
+
+
+    ///丰富的可可粉
 }
 
 class ZJCycleScrollView: UIView, UICollectionViewDelegate, UICollectionViewDataSource{
